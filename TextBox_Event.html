@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextBoxEvent</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#texttestfocus").focus(function(){
+                $(this).css("background-color","yellow")
+            });
+
+
+            $("#texttestblur").blur(function(){
+                $(this).css("background-color","red")
+            });
+
+
+            $("#texttestkeypress").keypress(function(){
+                alert($(this).val());
+            });
+
+
+
+            $("#texttestkeyup").keyup(function(){
+                alert($(this).val("Sahal"));
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <input type="text" id="texttestfocus" placeholder="Click To Focus"><hr>
+    <input type="text" id="texttestblur" placeholder="Click To Blur"><hr>
+    <input type="text" id="texttestkeypress" placeholder="Click To Keypress"><hr>
+    <input type="text" id="texttestkeyup" placeholder="Click To Keyup">
+</body>
+</html>
